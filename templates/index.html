@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block description %}
+    Homepage
+{% endblock description %}
+
+{% block content %}
+    <main>
+        <section class="hero-section">
+            <div class="grid-2-col">
+                <div class="centered-div">
+                    <h1>Profesionalno upravljanje zgradama</h1>
+                    <p>Transparentno, odgovorno i efikasno upravljanje stambenim zajednicama.</p>
+
+                    <div class="inline-div">
+                        <button class="primary-button">Zatražite ponudu</button>
+                        <button class="secondary-button">Prijavite kvar</button>
+                    </div>
+                </div>
+
+                <div class="centered-div">
+                    <img class="hero-img" src="{{ url_for('static', filename='slike/zgrada.jpg') }}" alt="Slika zgrade">
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock content %}

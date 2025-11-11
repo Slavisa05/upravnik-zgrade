@@ -1,0 +1,295 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Kontakt
+{% endblock title %}
+
+{% block description %}
+    Kontakt stranica
+{% endblock description %}
+
+{% block content %}
+    <main>
+        <!-- KONTAKT SEKCIJA -->
+        <section class="contact-section">
+            <div class="contact-container">
+                <!-- Kontakt Forma -->
+                <div class="contact-form-wrapper">
+                    <h2>Pošaljite nam poruku</h2>
+                    <p class="form-description">
+                        Popunite formu ispod i odgovorićemo vam u najkraćem mogućem roku. 
+                        Sva polja označena sa * su obavezna.
+                    </p>
+
+                    <form class="contact-form" method="POST" action="#">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Ime i prezime *</label>
+                                <input type="text" id="name" name="name" placeholder="Vaše ime i prezime" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email adresa *</label>
+                                <input type="email" id="email" name="email" placeholder="vasa@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefon *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+381 60 123 4567" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Predmet</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Izaberite predmet...</option>
+                                    <option value="general">Opšti upit</option>
+                                    <option value="services">Informacije o uslugama</option>
+                                    <option value="cooperation">Poslovna saradnja</option>
+                                    <option value="complaint">Primedba/Žalba</option>
+                                    <option value="other">Ostalo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Poruka *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Unesite vašu poruku..." required></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="gdpr" required>
+                                <span>Slažem se sa <a href="#">politikom privatnosti</a> i dozvolim obradu mojih podataka *</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="primary-button">
+                            Pošalji poruku
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAKT INFORMACIJE SEKCIJA -->
+        <section class="contact-info-section">
+            <div class="contact-info-overlay"></div>
+            <div class="contact-info-container">
+                <div class="contact-info-header">
+                    <h2>Kontakt informacije</h2>
+                    <p>Pozovite nas, pošaljite email ili posetite našu kancelariju. Tu smo za vas!</p>
+                </div>
+
+                <div class="contact-info-grid">
+                    <div class="info-card-inline">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h3>Telefon</h3>
+                            <p>
+                                <a href="tel:+381112345678">+381 11 234 5678</a><br>
+                                <a href="tel:+381601234567">+381 60 123 4567</a>
+                            </p>
+                            <span class="info-note">24/7 dostupnost</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card-inline">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>
+                                <a href="mailto:info@upravnikzgrade.rs">info@upravnikzgrade.rs</a><br>
+                                <a href="mailto:podrska@upravnikzgrade.rs">podrska@upravnikzgrade.rs</a>
+                            </p>
+                            <span class="info-note">Odgovor u roku od 2h</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card-inline">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>Adresa</h3>
+                            <p>
+                                Kneza Miloša 15<br>
+                                11000 Beograd, Srbija
+                            </p>
+                            <span class="info-note">Parking dostupan</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card-inline">
+                        <div class="info-icon">🕐</div>
+                        <div class="info-content">
+                            <h3>Radno vreme</h3>
+                            <p>
+                                Pon-Pet: 08:00 - 20:00<br>
+                                Subota: 09:00 - 15:00
+                            </p>
+                            <span class="info-note">Hitne intervencije 24/7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="social-section-inline">
+                    <h3>Pratite nas na društvenim mrežama</h3>
+                    <div class="social-links-inline">
+                        <a href="#" class="social-link-inline">
+                            <span>📘</span>
+                            Facebook
+                        </a>
+                        <a href="#" class="social-link-inline">
+                            <span>📷</span>
+                            Instagram
+                        </a>
+                        <a href="#" class="social-link-inline">
+                            <span>🔗</span>
+                            LinkedIn
+                        </a>
+                        <a href="#" class="social-link-inline">
+                            <span>📱</span>
+                            Twitter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SEKCIJA -->
+        <section class="faq-section">
+            <div class="faq-container">
+                <div class="faq-header">
+                    <span class="section-label-faq">Često postavljana pitanja</span>
+                    <h2>Imate pitanje? Pronađite odgovor ovde</h2>
+                    <p class="faq-intro">
+                        Prikupili smo najčešća pitanja naših klijenata kako bismo vam pomogli da brže dobijete informacije.
+                    </p>
+                </div>
+
+                <div class="faq-grid">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Koliko košta vaša usluga upravljanja zgradama?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Cena naših usluga zavisi od veličine zgrade, broja stanova i specifičnih potreba. 
+                                Standardna mesečna naknada kreće se od 500 do 1500 RSD po stanu. Nudimo besplatnu 
+                                procenu i izradu ponude prilagođene vašim potrebama bez obaveza.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Šta je uključeno u osnovnu uslugu upravljanja?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Osnovna usluga uključuje: vođenje finansijske dokumentacije, plaćanje režijskih troškova, 
+                                organizaciju skupštine stanara, koordinaciju održavanja zajedničkih prostora, 
+                                prijem i rešavanje žalbi stanara, kao i 24/7 dostupnost za hitne slučajeve.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Koliko traje ugovor i kako se raskida?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Standardni ugovor se zaključuje na godinu dana sa automatskim obnavljanjem. 
+                                Možete raskinuti ugovor u bilo kom trenutku sa otkaznim rokom od 30 dana. 
+                                Bez penala, skrivenih troškova ili obavezujućih klauzula.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Kako mogu pratiti finansijske troškove zgrade?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Sve stanare uključujemo u našu mobilnu aplikaciju gde možete u realnom vremenu 
+                                videti detaljne finansijske izveštaje, stanje rezervnog fonda, planirana ulaganja 
+                                i sve troškove do nivoa pojedinačne stavke. Transparentnost je naš prioritet.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Šta se dešava u slučaju hitnog kvara?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Imamo 24/7 dežurnu službu i sopstveni tim majstora. U slučaju hitnih kvarova 
+                                (poplava, nestanak struje, lom lifta), reagujemo u roku od 2 sata. 
+                                Za standardne intervencije, rešavamo u roku od 24 sata.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Da li vodite zapisnike sa skupština stanara?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Da, organizujemo i vodimo skupštine stanara u skladu sa zakonom. 
+                                Svi zapisnici, odluke i dokumentacija se digitalizuju i čuvaju u našem sistemu, 
+                                dostupni svim stanarima online u bilo kom trenutku.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Mogu li da dobijem probni period?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Da! Nudimo prvi mesec kao probni period tokom kojeg možete oceniti kvalitet naših usluga. 
+                                Ako niste zadovoljni, vraćamo 100% uplaćenih sredstava bez postavljanja pitanja. 
+                                To je naša garancija kvaliteta.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 8 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Da li sarađujete sa postojećim dobavljačima zgrade?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Apsolutno. Možemo nastaviti saradnju sa vašim postojećim dobavljačima ako ste zadovoljni, 
+                                ili vam predložiti alternativne opcije koje često donose uštede od 15-30%. 
+                                Sva odluka je na stanarima.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock content %}
